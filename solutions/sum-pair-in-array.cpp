@@ -39,10 +39,9 @@ int readInt() {
 
 int main() {
     int n = readInt(), k = readInt(), temp;
-    std::vector<int> v(n);
     unordered_set<int> s;
 
-    for (int i = 0; i < v.size(); ++i) {
+    for (int i = 0; i < n; ++i) {
         temp = readInt();
         if (!s.count(k - temp)) {
             s.insert(temp);
