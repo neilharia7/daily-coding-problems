@@ -33,6 +33,38 @@ int main() {
     std::vector<int> L = {5, 2, 99, 3, 4, 1, 100};
     
     std::cout << longestConsecutiveSeries(L) << std::endl;
+    return 0;
 }
 
-// TODO O(n) solution
+// O(n) solution
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int longestConsecutiveSeries(vector<int> L) {
+    
+    std::set<int> s;
+    for(auto i : L)
+        s.insert(i);
+    
+    std::vector<int> v(s.begin(), s.end());
+    int longest = 0, count = 1;
+    for (int i = 1; i < v.size(); ++i) {
+        if (v[i] - v[i - 1] == 1) {
+            count++;
+        } else {
+            count = 1;
+        }
+        
+        if (longest < count) 
+            longest = count;
+    }
+    return longest;
+}
+
+int main() {
+    std::vector<int> L = {5, 2, 99, 3, 4, 1, 100};
+    
+    std::cout << longestConsecutiveSeries(L) << std::endl;
+    return 0;
+}
