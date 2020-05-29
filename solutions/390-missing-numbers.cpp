@@ -6,7 +6,7 @@ Find the missing 1000 numbers.
 What is the computational and space complexity of your solution?
 */
 
-// Worst
+// Worst Case O(n) time & space complexity
 
 #include<bits/stdc++.h>
 using namespace std;
