@@ -1,4 +1,6 @@
 /*
+This problem was asked by Facebook.
+
 We have some historical clickstream data gathered from our site anonymously using cookies. 
 The histories contain URLs that users have visited in chronological order.
 
@@ -17,7 +19,6 @@ You should return the following:
 
 #include<bits/stdc++.h>
 using namespace std;
-
 
 vector<string> longestContiguousSequence(std::vector<string> user1, std::vector<string> user2) {
     
@@ -42,9 +43,7 @@ vector<string> longestContiguousSequence(std::vector<string> user1, std::vector<
     return res;
 }
 
-
 int main() {
-    
     std::vector<string> user1 = {"/home", "/register", "/login", "/user", "/one", "/two"};
     std::vector<string> user2 = {"/home", "/red", "/login", "/user", "/one", "/pink"};
     
